@@ -1,10 +1,25 @@
 # shopping app
 
+Steps to run the application
 
-### H2 Setup
+1. Build 
+```bash
+mvn clean install
+   ```
+   
+2. Run
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+   
+3. Setup Database
+
 Console
 ```bash
 http://localhost:8080/watch-console/login.do
+```
+```bash
+login with username/password from application.yml
 ```
 
 Run the queries
@@ -14,3 +29,15 @@ insert into WATCH_CATALOGUE (WATCH_ID,DISCOUNT,UNIT_PRICE,WATCH_NAME) VALUES (2 
 insert into WATCH_CATALOGUE (WATCH_ID,UNIT_PRICE,WATCH_NAME) VALUES (3 , 50, 'Swatch');
 insert into WATCH_CATALOGUE (WATCH_ID,UNIT_PRICE,WATCH_NAME) VALUES (4 , 30, 'Casio');
 ```
+
+Run the curl command
+```bash
+POST /checkout HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 43b6db93-8183-7988-3823-2dc381a90edc
+[1,2,1,4,3]
+
+```
+
