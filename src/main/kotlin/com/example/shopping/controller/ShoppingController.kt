@@ -20,9 +20,6 @@ class ShoppingController(
         consumes = ["application/json"]
     )
     fun checkout(@RequestBody idList: List<Int>): ResponseEntity<CheckoutResponse> {
-        var response = CheckoutResponse()
-        response.price = 5
-        checkoutService.checkout()
-        return ResponseEntity(response, HttpStatus.OK)
+        return ResponseEntity(checkoutService.checkout(idList), HttpStatus.OK)
     }
 }
