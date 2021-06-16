@@ -19,7 +19,7 @@ class ShoppingController(
         produces = ["application/json"],
         consumes = ["application/json"]
     )
-    fun checkout(@RequestBody idList: List<Int>): ResponseEntity<CheckoutResponse> {
-        return ResponseEntity(checkoutService.getPriceAtCheckout(idList), HttpStatus.OK)
+    fun checkout(@RequestBody watchIdList: List<Int>): ResponseEntity<CheckoutResponse> {
+        return ResponseEntity(checkoutService.getPriceAtCheckout(watchIdList), HttpStatus.OK)
     }
 }

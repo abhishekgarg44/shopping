@@ -1,5 +1,6 @@
 package com.example.shopping.models
 
-class CheckoutResponse {
-    var price: Int? = null
-}
+data class CheckoutResponse(
+    var price: Int? = null,
+    var errors: List<Error>? = null
+)
