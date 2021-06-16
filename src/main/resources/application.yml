@@ -8,9 +8,9 @@ spring:
         trace: false
         web-allow-others: false
   datasource:
-    url: jdbc:h2:mem:gadget-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: gadgetadmin
-    password: gadgetpwd
+    url: jdbc:h2:mem:watch-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: admin
+    password: admin
   jpa:
     show-sql: true
     hibernate:
